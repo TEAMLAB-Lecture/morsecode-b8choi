@@ -258,7 +258,7 @@ def decoding_sentence(morse_sentence):
             result += decoding_character(letter)
         result += ' '
 
-    return result
+    return result.strip()
     # ==================================
 
 
