@@ -284,13 +284,14 @@ def encoding_sentence(english_sentence):
     ui = get_cleaned_english_sentence(english_sentence).upper()
     words = ui.split()
 
-    result = ''
+    result = []
     for word in words:
+        eword = []
         for letter in word:
-            result += encoding_character(letter) + ' '
-        result += '  '
+            eword.append(encoding_character(letter))
+        result.append(' '.join(eword))
 
-    return result.strip()
+    return '  '.join(result)
     # ==================================
 
 
